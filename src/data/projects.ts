@@ -150,11 +150,11 @@ export const PROJECTS: Project[] = [
     category: "films",
     aspectRatio: "16:9",
     tagline: "High frame-rate 60fps kinetic speed ramped commercial sequence",
-    description: "Ultra-sharp 60fps motion with surgical speed ramping, bass impact, and HDR color grading.",
+    description: "Ultra-sharp 60fps motion with surgical speed ramping, bass impact, and HDR color grading in 16:9 widescreen.",
     tools: ["Premiere Pro", "60 FPS Ramps"],
     duration: "0:16",
     turnaroundTime: "24h Delivery",
-    videoUrl: "/videos/reel-02.mov",
+    videoUrl: "/videos/velocity-16x9.mp4",
     thumbnailUrl: "/thumbnails/reel-02.jpg"
   },
   {
