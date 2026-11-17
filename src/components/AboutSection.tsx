@@ -22,7 +22,7 @@ export default function AboutSection() {
               
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white/90">
                 <span>Rachamalla Rishikesh</span>
-                <span>Hyderabad, IN</span>
+                <span>Dehradun, IN</span>
               </div>
             </div>
 

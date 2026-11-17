@@ -44,7 +44,7 @@ export const CREATOR_PROFILE: CreatorProfile = {
     "Armed with Premiere Pro and CapCut Desktop, I specialize in high-efficiency editing workflows that guarantee delivery within 24 to 48 hours without compromising artistic depth."
   ],
   turnaround: "24–48 Hours",
-  location: "India • Available Worldwide",
+  location: "Dehradun, India • Available Worldwide",
   contact: {
     phone: "+91 8143937553",
     whatsapp: "+918143937553",
