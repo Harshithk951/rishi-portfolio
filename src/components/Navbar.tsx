@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { CREATOR_PROFILE } from "@/data/projects";
-import { Film, MessageSquare, Menu, X, ArrowUpRight, Zap } from "lucide-react";
+import { Film, MessageSquare, Menu, X, ArrowUpRight, Zap, Download } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -67,8 +67,18 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Actions / Direct WhatsApp */}
-        <div className="hidden sm:flex items-center gap-3">
+        {/* Actions / Direct WhatsApp & Resume */}
+        <div className="hidden sm:flex items-center gap-2 lg:gap-3">
+          <a
+            href={CREATOR_PROFILE.resumeUrl}
+            download="Rachamalla_Rishikesh_Resume.pdf"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white border border-white/10 text-xs font-medium transition-all duration-300 active:scale-95"
+            title="Download Rishikesh's Resume (PDF)"
+          >
+            <Download className="w-3.5 h-3.5 text-amber-400" />
+            <span>Resume</span>
+          </a>
+
           <a
             href={CREATOR_PROFILE.contact.whatsappUrl}
             target="_blank"
@@ -112,7 +122,17 @@ export default function Navbar() {
                 )}
               </a>
             ))}
-            <div className="pt-3 mt-2 border-t border-white/10">
+            <div className="pt-3 mt-2 border-t border-white/10 flex flex-col gap-2">
+              <a
+                href={CREATOR_PROFILE.resumeUrl}
+                download="Rachamalla_Rishikesh_Resume.pdf"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white/5 hover:bg-white/10 text-zinc-200 text-xs font-semibold border border-white/10"
+              >
+                <Download className="w-3.5 h-3.5 text-amber-400" />
+                <span>Download Resume (PDF)</span>
+              </a>
+
               <a
                 href={CREATOR_PROFILE.contact.whatsappUrl}
                 target="_blank"

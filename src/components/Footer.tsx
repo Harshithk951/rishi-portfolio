@@ -45,6 +45,13 @@ export default function Footer() {
             <a href="#contact" className="hover:text-amber-400 transition-colors">
               Contact
             </a>
+            <a
+              href={CREATOR_PROFILE.resumeUrl}
+              download="Rachamalla_Rishikesh_Resume.pdf"
+              className="hover:text-amber-400 transition-colors text-amber-400 flex items-center gap-1"
+            >
+              Resume (PDF)
+            </a>
           </div>
 
           {/* Social Icons & Back to Top */}

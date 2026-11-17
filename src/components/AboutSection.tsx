@@ -1,7 +1,7 @@
 "use client";
 
 import { CREATOR_PROFILE } from "@/data/projects";
-import { User, Sparkles, Layers, Sliders, CheckCircle, ExternalLink } from "lucide-react";
+import { User, Sparkles, Layers, Sliders, CheckCircle, ExternalLink, Download, FileText } from "lucide-react";
 import InstagramIcon from "@/components/icons/InstagramIcon";
 
 export default function AboutSection() {
@@ -128,6 +128,26 @@ export default function AboutSection() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Download Resume Action */}
+            <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+              <div>
+                <h4 className="text-sm font-bold text-white flex items-center gap-2 mb-0.5">
+                  <FileText className="w-4 h-4 text-amber-400" />
+                  <span>Verified Creator Resume</span>
+                </h4>
+                <p className="text-xs text-zinc-400">Download my background, software certifications &amp; project history.</p>
+              </div>
+
+              <a
+                href={CREATOR_PROFILE.resumeUrl}
+                download="Rachamalla_Rishikesh_Resume.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold tracking-wide transition-all duration-300 shadow-md shadow-amber-500/20 active:scale-95 whitespace-nowrap"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download Resume (PDF)</span>
+              </a>
             </div>
           </div>
 

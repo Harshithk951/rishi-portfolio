@@ -35,6 +35,7 @@ export interface CreatorProfile {
     craft: string[];
   };
   stats: { label: string; value: string; helper: string }[];
+  resumeUrl: string;
 }
 
 export const CREATOR_PROFILE: CreatorProfile = {
@@ -77,7 +78,8 @@ export const CREATOR_PROFILE: CreatorProfile = {
     { label: "Reel Retention", value: "85%+", helper: "Engineered for high watch time" },
     { label: "Specialties", value: "6 Styles", helper: "Reels, weddings, bikes, treks & more" },
     { label: "Client Satisfaction", value: "100%", helper: "Revisions until perfection" }
-  ]
+  ],
+  resumeUrl: "/rishikesh_resume.pdf"
 };
 
 export const CATEGORIES = [

@@ -1,7 +1,7 @@
 "use client";
 
 import { CREATOR_PROFILE } from "@/data/projects";
-import { Play, MessageSquare, Zap, Clock, Sparkles, ArrowDown } from "lucide-react";
+import { Play, MessageSquare, Zap, Clock, Sparkles, ArrowDown, Download } from "lucide-react";
 
 interface HeroProps {
   onOpenShowreel: () => void;
@@ -101,10 +101,21 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
             href={CREATOR_PROFILE.contact.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white border border-white/10 text-sm font-medium transition-all duration-300 active:scale-95"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white border border-white/10 text-sm font-medium transition-all duration-300 active:scale-95"
           >
             <MessageSquare className="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
             <span>Book Instant Edit (+91 8143937553)</span>
+          </a>
+
+          {/* Download Resume Button */}
+          <a
+            href={CREATOR_PROFILE.resumeUrl}
+            download="Rachamalla_Rishikesh_Resume.pdf"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white border border-white/10 text-sm font-medium transition-all duration-300 active:scale-95"
+            title="Download Rishikesh's Resume (PDF)"
+          >
+            <Download className="w-4 h-4 text-amber-400" />
+            <span>Resume</span>
           </a>
         </div>
 
