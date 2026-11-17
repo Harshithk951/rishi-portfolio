@@ -48,7 +48,7 @@ export const CREATOR_PROFILE: CreatorProfile = {
   contact: {
     phone: "+91 8143937553",
     whatsapp: "+918143937553",
-    whatsappUrl: "https://wa.me/918143937553?text=Hi%20Rishikesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20video%20project!",
+    whatsappUrl: "https://api.whatsapp.com/send/?phone=918143937553&text=Hi%20Rishikesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20video%20project!",
     email: "rachamallarishikesh09@gmail.com",
     instagram: "@the.southguy.delulu",
     instagramUrl: "https://instagram.com/the.southguy.delulu"

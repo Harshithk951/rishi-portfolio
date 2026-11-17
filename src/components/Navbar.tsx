@@ -66,11 +66,11 @@ export default function Navbar() {
         </nav>
 
         {/* Actions: Resume & WhatsApp */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={CREATOR_PROFILE.resumeUrl}
             download="Rachamalla_Rishikesh_Resume.pdf"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono text-zinc-400 hover:text-white hover:bg-white/[0.06] transition-all"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono text-zinc-400 hover:text-white hover:bg-white/[0.06] transition-all"
             title="Download Resume"
           >
             <Download className="w-3.5 h-3.5 text-zinc-400" />
@@ -81,21 +81,21 @@ export default function Navbar() {
             href={CREATOR_PROFILE.contact.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white hover:bg-zinc-200 text-black text-xs font-medium tracking-wide transition-all active:scale-95"
+            className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-white hover:bg-zinc-200 text-black text-xs font-medium tracking-wide transition-all active:scale-95"
           >
             <span>WhatsApp</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-black" />
           </a>
-        </div>
 
-        {/* Mobile Hamburger */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle Menu"
-          className="md:hidden p-2 rounded-full text-zinc-400 hover:text-white transition-colors"
-        >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle Menu"
+            className="md:hidden p-1.5 rounded-full text-zinc-400 hover:text-white transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}

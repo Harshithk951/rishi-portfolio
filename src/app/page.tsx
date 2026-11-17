@@ -11,7 +11,8 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
 import FilmGrain from "@/components/FilmGrain";
-import { Project, PROJECTS } from "@/data/projects";
+import { Project, PROJECTS, CREATOR_PROFILE } from "@/data/projects";
+import { MessageSquare } from "lucide-react";
 
 const FEATURED_SHOWREEL: Project = {
   id: "showreel-2026-master",
@@ -73,6 +74,18 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Persistent Floating WhatsApp Quick-Chat */}
+      <a
+        href={CREATOR_PROFILE.contact.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-black font-semibold text-xs shadow-[0_4px_25px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95"
+      >
+        <MessageSquare className="w-4 h-4 fill-current" />
+        <span className="hidden sm:inline">WhatsApp</span>
+      </a>
 
       {/* Cinematic Video Player Modal */}
       <VideoModal

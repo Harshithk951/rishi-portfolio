@@ -190,7 +190,7 @@ export default function VideoModal({ project, isOpen, onClose }: VideoModalProps
           </div>
 
           <a
-            href={`https://wa.me/918143937553?text=${customWhatsAppText}`}
+            href={`https://api.whatsapp.com/send/?phone=918143937553&text=${customWhatsAppText}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-zinc-200 text-black text-xs font-semibold whitespace-nowrap transition-all"

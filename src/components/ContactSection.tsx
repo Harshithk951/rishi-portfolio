@@ -16,7 +16,7 @@ export default function ContactSection() {
   };
 
   const whatsAppUrl = brief.trim()
-    ? `https://wa.me/918143937553?text=${encodeURIComponent(`Hi Rishikesh, regarding a project: ${brief}`)}`
+    ? `https://api.whatsapp.com/send/?phone=918143937553&text=${encodeURIComponent(`Hi Rishikesh, regarding a project: ${brief}`)}`
     : CREATOR_PROFILE.contact.whatsappUrl;
 
   return (
