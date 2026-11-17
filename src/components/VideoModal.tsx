@@ -89,27 +89,27 @@ export default function VideoModal({ project, isOpen, onClose }: VideoModalProps
       role="dialog"
       aria-modal="true"
       aria-label={project.title}
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-2xl animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/92 backdrop-blur-2xl animate-in fade-in duration-200"
       onClick={onClose}
     >
       <div
         className={`relative w-full ${
-          project.aspectRatio === "9:16" ? "max-w-md" : "max-w-4xl"
-        } bg-[#0e0e12] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl flex flex-col`}
+          project.aspectRatio === "9:16" ? "max-w-xs sm:max-w-md" : "max-w-4xl"
+        } max-h-[90dvh] bg-[#0e0e12] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl flex flex-col`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Header */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.06] bg-black/40">
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-            <span className="text-white font-medium">{project.title}</span>
+        <div className="flex items-center justify-between px-4 sm:px-5 py-2.5 sm:py-3 border-b border-white/[0.06] bg-black/40 shrink-0">
+          <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 truncate mr-2">
+            <span className="text-white font-medium truncate">{project.title}</span>
             <span>•</span>
-            <span>{project.duration}</span>
+            <span className="shrink-0">{project.duration}</span>
           </div>
 
           <button
             onClick={onClose}
             aria-label="Close"
-            className="p-1 rounded-full text-zinc-400 hover:text-white transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full text-zinc-400 hover:text-white active:bg-white/[0.1] transition-colors shrink-0"
           >
             <X className="w-4 h-4" />
           </button>
@@ -118,7 +118,7 @@ export default function VideoModal({ project, isOpen, onClose }: VideoModalProps
         {/* Video Viewport */}
         <div
           className={`relative bg-black flex items-center justify-center overflow-hidden ${
-            project.aspectRatio === "9:16" ? "aspect-[9/16] max-h-[70vh]" : "aspect-[16/9]"
+            project.aspectRatio === "9:16" ? "aspect-[9/16] max-h-[58dvh] sm:max-h-[68vh]" : "aspect-[16/9] max-h-[55dvh] sm:max-h-[68vh]"
           }`}
         >
           {!hasVideoError && project.videoUrl ? (
@@ -156,7 +156,7 @@ export default function VideoModal({ project, isOpen, onClose }: VideoModalProps
 
           {/* Minimal Floating Controls */}
           {!hasVideoError && (
-            <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent flex flex-col gap-2">
+            <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 bg-gradient-to-t from-black/85 to-transparent flex flex-col gap-1.5 sm:gap-2">
               <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden cursor-pointer">
                 <div
                   className="h-full bg-white transition-all duration-100"
@@ -165,17 +165,17 @@ export default function VideoModal({ project, isOpen, onClose }: VideoModalProps
               </div>
 
               <div className="flex items-center justify-between text-white text-xs font-mono">
-                <div className="flex items-center gap-3">
-                  <button onClick={togglePlay} aria-label={isPlaying ? "Pause" : "Play"}>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <button onClick={togglePlay} aria-label={isPlaying ? "Pause" : "Play"} className="p-1.5 rounded hover:bg-white/[0.1]">
                     {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 fill-current" />}
                   </button>
-                  <button onClick={toggleMute} aria-label={isMuted ? "Unmute" : "Mute"}>
+                  <button onClick={toggleMute} aria-label={isMuted ? "Unmute" : "Mute"} className="p-1.5 rounded hover:bg-white/[0.1]">
                     {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
                   </button>
-                  <span className="text-[11px] text-zinc-400">{project.duration}</span>
+                  <span className="text-[10px] sm:text-[11px] text-zinc-400">{project.duration}</span>
                 </div>
 
-                <button onClick={toggleFullscreen} aria-label="Fullscreen">
+                <button onClick={toggleFullscreen} aria-label="Fullscreen" className="p-1.5 rounded hover:bg-white/[0.1]">
                   <Maximize2 className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -184,18 +184,18 @@ export default function VideoModal({ project, isOpen, onClose }: VideoModalProps
         </div>
 
         {/* Footer Details */}
-        <div className="p-5 bg-[#0a0a0d] border-t border-white/[0.06] flex items-center justify-between gap-4">
+        <div className="p-3.5 sm:p-5 bg-[#0a0a0d] border-t border-white/[0.06] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-4 shrink-0">
           <div>
-            <p className="text-xs text-zinc-400">{project.description}</p>
+            <p className="text-[11px] sm:text-xs text-zinc-400 line-clamp-2">{project.description}</p>
           </div>
 
           <a
             href={`https://api.whatsapp.com/send/?phone=918143937553&text=${customWhatsAppText}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-zinc-200 text-black text-xs font-semibold whitespace-nowrap transition-all"
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-white hover:bg-zinc-200 text-black text-xs font-semibold whitespace-nowrap transition-all shadow-md active:scale-98"
           >
-            <span>Inquire Edit</span>
+            <span>Inquire Edit on WhatsApp</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>

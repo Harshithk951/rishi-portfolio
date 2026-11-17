@@ -81,10 +81,10 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-black font-semibold text-xs shadow-[0_4px_25px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95"
+        className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center justify-center w-12 h-12 sm:w-auto sm:h-auto sm:px-4 sm:py-2.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-black font-semibold text-xs shadow-[0_4px_25px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95"
       >
-        <MessageSquare className="w-4 h-4 fill-current" />
-        <span className="hidden sm:inline">WhatsApp</span>
+        <MessageSquare className="w-5 h-5 sm:w-4 sm:h-4 fill-current" />
+        <span className="hidden sm:inline sm:ml-2">WhatsApp</span>
       </a>
 
       {/* Cinematic Video Player Modal */}
