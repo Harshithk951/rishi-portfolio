@@ -80,6 +80,19 @@ export const CATEGORIES = [
 
 export const PROJECTS: Project[] = [
   {
+    id: "kinetic-speed-cut-02",
+    title: "Velocity Sequence (4K 60FPS)",
+    category: "films",
+    aspectRatio: "16:9",
+    tagline: "High frame-rate 60fps kinetic speed ramped commercial sequence",
+    description: "Ultra-sharp 60fps motion with surgical speed ramping, bass impact, and HDR color grading in 16:9 widescreen.",
+    tools: ["Premiere Pro", "60 FPS Ramps"],
+    duration: "0:16",
+    turnaroundTime: "24h Delivery",
+    videoUrl: "/videos/velocity-16x9.mp4",
+    thumbnailUrl: "/thumbnails/reel-02.jpg"
+  },
+  {
     id: "reel-b13v35",
     title: "Cinematic Reel 01",
     category: "reels",
@@ -106,6 +119,19 @@ export const PROJECTS: Project[] = [
     thumbnailUrl: "/thumbnails/reel-b13v17.jpg"
   },
   {
+    id: "creator-story-reel-01",
+    title: "Wholesome Story Reel",
+    category: "reels",
+    aspectRatio: "9:16",
+    tagline: "Evocative 9:16 vertical travel & lifestyle cut",
+    description: "Organic pacing, ambient soundscapes, and rich color grading tailored for maximum watch time.",
+    tools: ["CapCut Desktop", "Premiere Pro"],
+    duration: "0:48",
+    turnaroundTime: "24h Delivery",
+    videoUrl: "/videos/reel-01.mov",
+    thumbnailUrl: "/thumbnails/reel-01.jpg"
+  },
+  {
     id: "reel-b14v10",
     title: "Cinematic Reel 03",
     category: "reels",
@@ -130,32 +156,6 @@ export const PROJECTS: Project[] = [
     turnaroundTime: "24h Delivery",
     videoUrl: "/videos/reel-b14v23.mp4",
     thumbnailUrl: "/thumbnails/reel-b14v23.jpg"
-  },
-  {
-    id: "creator-story-reel-01",
-    title: "Wholesome Story Reel",
-    category: "reels",
-    aspectRatio: "9:16",
-    tagline: "Evocative 9:16 vertical travel & lifestyle cut",
-    description: "Organic pacing, ambient soundscapes, and rich color grading tailored for maximum watch time.",
-    tools: ["CapCut Desktop", "Premiere Pro"],
-    duration: "0:48",
-    turnaroundTime: "24h Delivery",
-    videoUrl: "/videos/reel-01.mov",
-    thumbnailUrl: "/thumbnails/reel-01.jpg"
-  },
-  {
-    id: "kinetic-speed-cut-02",
-    title: "Velocity Sequence (4K 60FPS)",
-    category: "films",
-    aspectRatio: "16:9",
-    tagline: "High frame-rate 60fps kinetic speed ramped commercial sequence",
-    description: "Ultra-sharp 60fps motion with surgical speed ramping, bass impact, and HDR color grading in 16:9 widescreen.",
-    tools: ["Premiere Pro", "60 FPS Ramps"],
-    duration: "0:16",
-    turnaroundTime: "24h Delivery",
-    videoUrl: "/videos/velocity-16x9.mp4",
-    thumbnailUrl: "/thumbnails/reel-02.jpg"
   },
   {
     id: "nishabdam-bts-reel",
