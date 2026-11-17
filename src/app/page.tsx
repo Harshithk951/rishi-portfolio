@@ -18,14 +18,13 @@ const FEATURED_SHOWREEL: Project = {
   title: "Rachamalla Rishikesh — 2026 Cinematic Director's Cut",
   category: "films",
   aspectRatio: "16:9",
-  tagline: "High-octane montage of brand reels, wedding stories, bike cinematics, and short films.",
-  description: "A fast-paced showcase highlighting rhythm cuts, beat-synced sound design, speed ramping, and warm 35mm cinematic grading edited across Premiere Pro and CapCut Desktop.",
+  tagline: "4K narrative master cut featuring dramatic pacing and cinematic grading.",
+  description: "A master cut highlighting rhythm cuts, beat-synced sound design, speed ramping, and warm 35mm cinematic grading edited across Premiere Pro and CapCut Desktop.",
   tools: ["Adobe Premiere Pro", "CapCut Desktop", "Sound Design", "Color Timing"],
   duration: "3:45",
   turnaroundTime: "24–48h Delivery",
   videoUrl: "/videos/film-333-master.mp4",
-  thumbnailUrl: "/thumbnails/film-333.jpg",
-  metrics: { label: "Format", value: "4K Master • 24 FPS" }
+  thumbnailUrl: "/thumbnails/film-333.jpg"
 };
 
 export default function Home() {
