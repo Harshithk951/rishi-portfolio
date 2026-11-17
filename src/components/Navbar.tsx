@@ -32,15 +32,24 @@ export default function Navbar() {
             : "bg-[#0c0c0e]/40 backdrop-blur-md border border-white/[0.04] py-3.5 px-6 sm:px-8"
         } flex items-center justify-between`}
       >
-        {/* Name / Monogram */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <span className="font-medium text-sm sm:text-base tracking-tight text-zinc-100 group-hover:text-white transition-colors">
-            {CREATOR_PROFILE.name}
-          </span>
-          <span className="text-zinc-600 font-mono text-xs hidden sm:inline">/</span>
-          <span className="text-xs text-zinc-400 font-normal tracking-wide hidden sm:inline">
-            Editor
-          </span>
+        {/* Name & Avatar */}
+        <a href="#" className="flex items-center gap-3 group">
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-white/20 shrink-0">
+            <img
+              src="/profile.jpg"
+              alt={CREATOR_PROFILE.name}
+              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="font-medium text-sm sm:text-base tracking-tight text-zinc-100 group-hover:text-white transition-colors">
+              {CREATOR_PROFILE.name}
+            </span>
+            <span className="text-zinc-600 font-mono text-xs hidden sm:inline">/</span>
+            <span className="text-xs text-zinc-400 font-normal tracking-wide hidden sm:inline">
+              Editor
+            </span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}

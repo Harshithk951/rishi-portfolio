@@ -12,6 +12,17 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
     <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 pt-32 pb-20">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         
+        {/* Creator Portrait Avatar */}
+        <div className="relative mb-5 group">
+          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-white/20 shadow-2xl bg-zinc-900 mx-auto transition-transform duration-500 group-hover:scale-105">
+            <img
+              src="/profile.jpg"
+              alt={CREATOR_PROFILE.name}
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+        </div>
+
         {/* Understated Editorial Kicker */}
         <div className="text-[11px] font-mono tracking-[0.25em] text-zinc-400 uppercase mb-6 sm:mb-8">
           Video Editor &amp; Videographer • 24–48h Turnaround

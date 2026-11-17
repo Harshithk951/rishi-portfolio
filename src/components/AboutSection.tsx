@@ -13,13 +13,12 @@ export default function AboutSection() {
           {/* Left Column: Portrait & Handle */}
           <div className="md:col-span-5 flex flex-col">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#111115] border border-white/[0.08] mb-4">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url('/profile.jpg')`,
-                }}
+              <img
+                src="/profile.jpg"
+                alt={CREATOR_PROFILE.name}
+                className="w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
               
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white/90">
                 <span>Rachamalla Rishikesh</span>
